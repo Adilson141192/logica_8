@@ -6,7 +6,7 @@ function adicionar() {
         alert('Informe o nome do amigo!');
         return;
     }
-    
+
 
     let lista = document.getElementById('lista-amigos');
     amigos.push(amigo.value);
@@ -19,6 +19,11 @@ function adicionar() {
 }
 
 function sortear() {
+    if (amigos.length < 3) {
+        alert('Adicione pelo menos 3 amigos')
+        return;
+    }
+
     embaralha(amigos);
     let sorteio = document.getElementById('lista-sorteio');
 
